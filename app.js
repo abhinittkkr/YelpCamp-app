@@ -27,7 +27,7 @@ mongoose.Promise = global.Promise;
 
 // const databaseUri = '';
 
-mongoose.connect("mongodb+srv://ab264:yelpcamp@1@cluster0-mafit.mongodb.net/test?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://abhi:nitkkr@cluster0-mafit.mongodb.net/test?retryWrites=true&w=majority")
       .then(() => console.log(`Database connected`))
       .catch(err => console.log(`Database connection error: ${err.message}`));
 
