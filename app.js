@@ -29,7 +29,7 @@ mongoose.Promise = global.Promise;
 
 mongoose.connect("mongodb+srv://abhi:nitkkr@cluster0-mafit.mongodb.net/test?retryWrites=true&w=majority")
       .then(() => console.log(`Database connected`))
-      .catch(err => console.log(`Database connection error: ${err.message}`));
+      .catch(err => console.log(`Error :: ${err.message}`));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
@@ -67,5 +67,5 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 app.listen(process.env.PORT, function(){
-   console.log("The YelpCamp Server Has Started! at port 8000");
+   console.log("The YelpCamp Server Has Started!");
 });
